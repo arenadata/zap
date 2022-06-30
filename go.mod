@@ -1,4 +1,4 @@
-module go.uber.org/zap
+module github.com/arenadata/zap
 
 go 1.18
 
