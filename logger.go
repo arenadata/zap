@@ -147,6 +147,12 @@ func (log *Logger) Sugar() *SugaredLogger {
 	return &SugaredLogger{core}
 }
 
+// Add custom offset to callerSkip. It is useful if you write custom log
+// functions wrapped around standard log functions
+func (log *Logger) AddCallerSkip(offset int) {
+         log.callerSkip += offset
+}
+
 // Named adds a new path segment to the logger's name. Segments are joined by
 // periods. By default, Loggers are unnamed.
 func (log *Logger) Named(s string) *Logger {
